@@ -1,0 +1,84 @@
+/* Simple styling for the game */
+:root{
+  --bg:#071021;
+  --panel:#0f1724;
+  --accent:#06b6d4;
+  --muted:#9ca3af;
+  --text:#e6eef8;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#020317 0%, #071021 100%);
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+}
+
+main#app{
+  width:100%;
+  max-width:1100px;
+}
+
+header{ text-align:center; margin-bottom:14px }
+h1{ margin:0; font-size:24px; letter-spacing:-0.4px }
+.subtitle{ margin:6px 0 0; color:var(--muted) }
+
+#game-wrap{
+  position:relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  border-radius:12px;
+  padding:18px;
+  box-shadow: 0 10px 40px rgba(2,6,23,0.6);
+}
+
+canvas#game{
+  display:block;
+  width:100%;
+  max-height:420px;
+  border-radius:8px;
+  background: linear-gradient(180deg,#081028 0%, #05101c 100%);
+  box-shadow: inset 0 -6px 40px rgba(0,0,0,0.6);
+}
+
+/* overlay for start / game over */
+.overlay{
+  position:absolute;
+  inset:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:none;
+}
+.overlay .panel{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  border:1px solid rgba(255,255,255,0.03);
+  padding:20px 24px;
+  border-radius:10px;
+  text-align:center;
+  pointer-events:auto;
+  color:var(--text);
+  min-width:260px;
+}
+.panel h2{ margin:0 0 6px; font-size:20px }
+.panel p{ margin:0 0 12px; color:var(--muted) }
+.btn{
+  background:var(--accent);
+  color:#01212a;
+  border:none;
+  padding:10px 16px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+}
+.score-info{ margin-top:12px; color:var(--muted); font-size:13px }
+
+footer{ margin-top:12px; text-align:center; color:var(--muted); font-size:13px }
+.hint{ margin:6px 0 0; color:var(--muted); font-size:12px }
+a{ color:var(--accent); text-decoration:none }
+a:hover{ text-decoration:underline }
