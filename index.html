@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CodedBryt Mini Game — Dodge the Beats</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <header>
+      <h1>CodedBryt — Dodge the Beats</h1>
+      <p class="subtitle">Move with ◀ ▶ or touch left/right. Avoid the falling beats. Survive to increase score.</p>
+    </header>
+
+    <section id="game-wrap">
+      <canvas id="game" width="1000" height="360" aria-label="Dodge the Beats game canvas"></canvas>
+
+      <div id="overlay" class="overlay">
+        <div class="panel">
+          <h2 id="stateTitle">Play</h2>
+          <p id="stateText">Press Space or Click to start</p>
+          <button id="startBtn" class="btn">Start</button>
+          <div id="scoreInfo" class="score-info" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made by <strong>CodedBryt</strong> — <a href="https://github.com/brytvillz" target="_blank" rel="noopener">GitHub</a></p>
+      <p class="hint">Tip: press Space to pause/resume</p>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
